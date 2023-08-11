@@ -1,7 +1,7 @@
 ### User
 
 1. username
-2. phone_number
+2. phone
 3. roles
 
 ### Kategori Produk
