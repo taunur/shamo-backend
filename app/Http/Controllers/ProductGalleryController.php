@@ -32,13 +32,13 @@ class ProductGalleryController extends Controller
                         </form>';
                 })
                 ->editColumn('url', function ($item) {
-                    return '<img style="max-width: 150px;" src="' . $item->url . '"/>';
+                    return '<img style="max-width: 150px" src="' . asset($item->url) . '" />';
                 })
                 ->editColumn('is_featured', function ($item) {
                     return $item->is_featured ? 'Yes' : 'No';
                 })
                 ->rawColumns(['action', 'url'])
-                ->make();
+                ->make(true);
         }
 
         return view('pages.dashboard.gallery.index', compact('product'));

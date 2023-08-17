@@ -19,11 +19,14 @@
                     },
                     {
                         data: 'url',
-                        name: 'url'
+                        name: 'url',
                     },
                     {
                         data: 'is_featured',
-                        name: 'is_featured'
+                        name: 'is_featured',
+                        render: function(data, type, full, meta) {
+                            return data ? 'Yes' : 'No';
+                        }
                     },
                     {
                         data: 'action',
